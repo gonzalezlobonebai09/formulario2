@@ -1,0 +1,369 @@
+:root {
+    /* Color de fondo personalizado para los inputs*/
+    --input-bg-color: #fff1f2; 
+    --input-border-color: #db2777;
+    --input-focus-border: #831843;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #ffe355;  
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    line-height: 1.6;
+    color: #111827;
+}
+
+body > div {
+    background: #ffffff;                 
+    border: 5px solid #000000;           
+    border-radius: 16px;
+    box-shadow: none;                
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 650px;
+}
+
+/* --- foto de inicio --- */
+.card-inicio {
+    text-align: center;
+}
+
+.container-img {
+    width: 100%;            
+    max-width: 280px;       
+    height: 160px;          
+    margin: 0 auto 1.5rem auto;
+    border-radius: 12px;    
+    overflow: hidden;
+    border: 4px solid #0284c7; 
+    box-shadow: none;                 
+}
+
+.taylor-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #dc2626;           
+    margin-bottom: 0.25rem;
+    text-align: center;
+}
+
+h1 + p {
+    text-align: center;
+    color: #374151;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+form > fieldset:nth-of-type(1) {
+    border: 4px solid #4e9769;          
+    background-color: #dcfce7;          
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+form > fieldset:nth-of-type(1) legend {
+    color: #14532d;
+    border: 2px solid #52d783;
+    background-color: #ffffff;
+}
+
+form > fieldset:nth-of-type(1) legend::before {
+    background: #39cd6f;
+}
+
+form > fieldset:nth-of-type(2) {
+    border: 4px solid #db2777;          
+    background-color: #fce7f3;          
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+form > fieldset:nth-of-type(2) legend {
+    color: #831843;
+    border: 2px solid #db2777;
+    background-color: #ffffff;
+}
+
+form > fieldset:nth-of-type(2) legend::before {
+    background: #db2777;
+}
+
+form > fieldset:nth-of-type(3) {
+    border: 4px solid #7c3aed;          
+    background-color: #ede9fe;          
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+form > fieldset:nth-of-type(3) legend {
+    color: #4c1d95;
+    border: 2px solid #7c3aed;
+    background-color: #ffffff;
+}
+
+form > fieldset:nth-of-type(3) legend::before {
+    background: #7c3aed;
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 6px;
+}
+
+legend::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+fieldset > div {
+    margin-bottom: 1rem;
+}
+
+fieldset > div:last-child {
+    margin-bottom: 0;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #111827;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;                       
+    padding: 0.25rem 0.6rem; 
+    border: 2px solid var(--input-border-color);         
+    border-radius: 6px;                
+    font-size: 0.9rem;
+    font-family: inherit;              
+    color: #111827;
+    background: var(--input-bg-color); 
+    outline: none;                     
+    box-shadow: none;             
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--input-focus-border);
+    box-shadow: none;                             
+    background: #ffffff; /* Se vuelve blanco al hacer foco para escribir cómodamente */
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #6b7280;      
+    font-style: italic;  
+}
+
+select {
+    appearance: none;    
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23111827' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;  
+    padding-right: 2.2rem;                   
+    cursor: pointer;
+}
+
+/* --- Checkbox --- */
+input[type="radio"],
+input[type="checkbox"] {
+    appearance: none;              
+    -webkit-appearance: none;      
+    width: 18px;
+    height: 18px;
+    border: 2px solid #4b5563;     
+    margin-right: 0.4rem;          
+    vertical-align: middle;        
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;                
+    background-color: #ffffff;
+}
+
+/* --- Radio --- */
+input[type="radio"] {
+    border-radius: 50%;            
+}
+
+input[type="checkbox"] {
+    border-radius: 4px;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    border-color: #db2777;         
+    background: #db2777;
+}
+
+input[type="checkbox"]:checked {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+fieldset > div > div {
+    display: flex;
+    flex-wrap: wrap;              
+    gap: 0.6rem 1rem;           
+    margin-top: 0.3rem;
+}
+
+fieldset > div > div label {
+    display: inline-flex;         
+    align-items: center;          
+    font-weight: 400;             
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;      
+    border-radius: 20px;          
+    background: #ffffff;          
+    border: 2px solid #db2777; 
+}
+
+fieldset > div > div label:has(input:checked) {
+    background: #db2777;           
+    border-color: #831843;         
+    color: #ffffff;                
+    font-weight: 500;              
+}
+
+textarea {
+    resize: vertical;     
+    min-height: 65px;/* para que no sea tan largo*/
+}
+
+form > div:has(input[name="terminos"]) {
+    display: flex;
+    align-items: flex-start;   
+    padding: 0.3rem 0;
+}
+
+form > div:has(input[name="terminos"]) a {
+    color: #2563eb;            
+    text-decoration: underline; 
+    font-weight: 600;
+}
+
+/* --- btn --- */
+form > div:last-child {
+    display: flex;
+    gap: 1rem;                 
+    justify-content: center;   
+    flex-wrap: wrap;           
+}
+
+.menu-inicio {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.btn-enlace, button {
+    font-family: inherit;          
+    font-size: 1rem;               
+    font-weight: 600;              
+    padding: 0.6rem 2rem;         
+    border: none;
+    border-radius: 10px;           
+    cursor: pointer;               
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* btn principal */
+button[type="submit"], .btn-enlace {
+    background: #f97316;           
+    color: white;                  
+    box-shadow: none;                
+    flex: 1;                       
+    max-width: 250px;              
+}
+
+button[type="submit"]:hover, .btn-enlace:hover {
+    background: #c2410c;                              
+    transform: none; 
+}
+
+button[type="reset"] {
+    background: #ffffff;       
+    color: #111827;                
+    border: 2px solid #4b5563;     
+    flex: 1;
+    max-width: 250px;
+    box-shadow: none;
+}
+
+button[type="reset"]:hover {
+    background: #e5e7eb;           
+    transform: none;
+}
+
+:focus-visible {
+    outline: 3px solid #2563eb;   
+    outline-offset: 2px;          
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;             
+    }
+    body > div {
+        padding: 1.5rem;           
+    }
+    form > div:last-child {
+        flex-direction: column;
+        align-items: center;
+    }
+    button, .btn-enlace {
+        max-width: 100%;
+        width: 100%;
+    }
+}
