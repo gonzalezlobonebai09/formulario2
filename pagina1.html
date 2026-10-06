@@ -9,9 +9,9 @@
 <body>
     <div>
         <h1>Registro The Eras Tour</h1>
-        <p>Completa todos los campos para asegurar tu lugar</p>
-
-        <form action="#" method="POST" id="registroForm">
+        <p>Completa todos los campos para asegurar tu entrada</p>
+                                                                    <!-- para que al tocar Ninguna te direccione a la pagina 3 -->
+        <form action="pagina2.html" method="GET" id="registroForm" onsubmit="if(document.getElementById('ninguna').checked){ this.action='pagina3.html'; }">
         
             <fieldset>
                 <legend>Datos Personales</legend>
@@ -67,11 +67,19 @@
                 <div>
                     <label>Intereses / Eras Favoritas</label>
                     <div>
-                        <label><input type="checkbox" name="intereses" value="Ropa"> Ropa</label>
-                        <label><input type="checkbox" name="intereses" value="Joyeria"> Joyería</label>
-                        <label><input type="checkbox" name="intereses" value="Bolsos"> Bolsos</label>
-                        <label><input type="checkbox" name="intereses" value="Música"> Música</label>
-                        <label><input type="checkbox" name="intereses" value="Hogar"> Hogar</label>
+                        <label><input type="checkbox" name="intereses" value="Debut"> Tylor Swift (Debut) </label>
+                        <label><input type="checkbox" name="intereses" value="Fearless"> Fearless</label>
+                        <label><input type="checkbox" name="intereses" value="Speak Now"> Speak Now</label>
+                        <label><input type="checkbox" name="intereses" value="Red"> Red</label>
+                        <label><input type="checkbox" name="intereses" value="1989"> 1989</label>
+                        <label><input type="checkbox" name="intereses" value="Reputation"> Reputation </label>
+                        <label><input type="checkbox" name="intereses" value="Lover"> Lover</label>
+                        <label><input type="checkbox" name="intereses" value="Folklore"> Folklore</label>
+                        <label><input type="checkbox" name="intereses" value="Evermore"> Evermore</label>
+                        <label><input type="checkbox" name="intereses" value="Midnights"> Midnights</label>
+                        <label><input type="checkbox" name="intereses" value="TTPD"> The Tortured Poets Deparment</label>
+                        <label><input type="checkbox" name="intereses" value="Showgirl"> The Life of a Showgirl</label>
+                        <label><input type="checkbox" name="intereses" value="Ninguna" id="ninguna"> Ninguna (No me gusta su música)</label>
                     </div>
                 </div>
 
@@ -105,8 +113,14 @@
             <div>
                 <button type="submit">Registrarse</button>
                 <button type="reset">Limpiar formulario</button>
+
+            
             </div>
         </form>
     </div>
+         <footer class="pie-pagina">
+        <p><strong>Creado por Nebai Gonzalez 4B con fines educativos</strong></p>
+    </footer>
+
 </body>
 </html>
